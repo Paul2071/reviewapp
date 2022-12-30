@@ -1,9 +1,9 @@
 import { StyleSheet, View, Text } from "react-native";
 
-export default function Home () {
+export default function Loading () {
     return (
         <View style={styles.maincontainer}>
-            <Text style={styles.titletext}>Home Screen</Text>
+            <Text>App is loading...</Text>
         </View>
     )
 }
@@ -12,8 +12,5 @@ export default function Home () {
 const styles = StyleSheet.create({
     maincontainer: {
         padding: 24,
-    },
-    titletext: {
-        fontFamily: 'monospace',
     }
 });
