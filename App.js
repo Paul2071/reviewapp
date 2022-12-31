@@ -14,7 +14,7 @@ export default function App() {
   if (!loaded) {
     return <Loading/>;
   } else {
-    return <Home />;
+    return <Home /> ;
   }
 }
 
