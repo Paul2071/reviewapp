@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from 'expo-font';
 import Home from "./pages/home";
 import ReviewDetails from "./pages/reviewDetails";
 import Loading from "./pages/loading";
 
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-  useEffect(
-    () => {
-      const getFonts = async () => {
-        return   {
-          "rubik-regular": require("./assets/fonts/Rubik-Regular.ttf"),
-          "rubik-semibold": require("./assets/fonts/Rubik-SemiBold.ttf"),
-        };
-      };
-      setFontsLoaded(true);
-      getFonts()
-    },
-    []
-  );
-
-
-  if (fontsLoaded) {
-    return <Home />;
+  const [loaded] = useFonts({
+    rubik: require("./assets/fonts/Rubik-Regular.ttf"),
+    rubiksemibold: require ("./assets/fonts/Rubik-SemiBold.ttf")
+  })
+  
+  if (!loaded) {
+    return <Loading/>;
   } else {
-    return <Loading />;
+    return <Home />;
   }
 }
 

@@ -14,6 +14,6 @@ const styles = StyleSheet.create({
         padding: 24,
     },
     titletext: {
-        fontFamily: 'monospace',
+        fontFamily: 'rubiksemibold',
     }
 });
