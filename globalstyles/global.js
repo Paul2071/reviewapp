@@ -8,7 +8,7 @@ export const  globalStyles = StyleSheet.create({
     titletext: {
         fontFamily: 'rubiksemibold',
         fontSize: 24,
-        color: 'teal'
+        color: 'red'
     },
     paragraphText: {
         marginVertical: 8,

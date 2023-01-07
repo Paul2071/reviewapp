@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from 'expo-font';
 import Home from "./pages/home";
 import ReviewDetails from "./pages/reviewDetails";
+import About from './pages/about';
 import Loading from "./pages/loading";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [loaded] = useFonts({
@@ -14,7 +19,27 @@ export default function App() {
   if (!loaded) {
     return <Loading/>;
   } else {
-    return <Home /> ;
+    return (
+     <NavigationContainer> 
+      <Stack.Navigator>
+        <Stack.Screen 
+          name="Home"
+          component={Home}
+          options={{title: "Welcome"}}
+        />
+        <Stack.Screen 
+          name="Review"
+          component={ReviewDetails}
+          options={{title: "Review Screen"}}
+        />
+        <Stack.Screen 
+          name="About"
+          component={About}
+          options={{title: "About"}}
+        />
+      </Stack.Navigator>
+     </NavigationContainer> 
+      )  ;
   }
 }
 
