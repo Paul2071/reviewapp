@@ -21,11 +21,11 @@ export default function App() {
   } else {
     return (
      <NavigationContainer> 
-      <Stack.Navigator>
+      <Stack.Navigator  screenOptions={{ headerStyle: { backgroundColor: 'green' }, headerTintColor: "#fff" }}>
         <Stack.Screen 
           name="Home"
           component={Home}
-          options={{title: "Welcome"}}
+          options={{title: "Book list"}}
         />
         <Stack.Screen 
           name="Review"
