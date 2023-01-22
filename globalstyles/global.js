@@ -6,9 +6,9 @@ export const  globalStyles = StyleSheet.create({
         padding: 20,
     },
     titletext: {
-        fontFamily: 'rubiksemibold',
+        fontFamily: "rubik",
         fontSize: 24,
-        color: 'red'
+        color: 'black'
     },
     paragraphText: {
         marginVertical: 8,

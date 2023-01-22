@@ -8,13 +8,15 @@ const {title, body, rating} = route.params
 
     return (
         <View style={globalStyles.maincontainer}>
-        <MainCard>
-            <Text>{ title }</Text>
+       
+        <MainCard >
+            <Text style={globalStyles.titletext}>{ title }</Text>
         
             <Text>{ body }</Text>
         
             <Text>{ rating }</Text>
         </MainCard>
+          
             <Button 
             title="Go to Home"
             onPress={() => navigation.navigate("Home")}

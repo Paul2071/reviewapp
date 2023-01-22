@@ -13,7 +13,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   const [loaded] = useFonts({
     rubik: require("./assets/fonts/Rubik-Regular.ttf"),
-    rubiksemibold: require ("./assets/fonts/Rubik-SemiBold.ttf")
+    rubiksemibold: require ("./assets/fonts/Rubik-SemiBold.ttf"),
+    rubikbold: require ("./assets/fonts/Rubik-Bold.ttf")
   })
   
   if (!loaded) {
