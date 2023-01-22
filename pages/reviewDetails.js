@@ -1,12 +1,12 @@
-import { StyleSheet, View, Text, Button } from "react-native";
-import { globalStyles } from "../globalstyles/global";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
+import { globalStyles, images } from "../globalstyles/global";
 import MainCard from "../components/mainCard";
 
 export default function ReviewDetails ({route, navigation} ) {
 
 const {title, body, rating} = route.params
 
-    return (
+        return (
         <View style={globalStyles.maincontainer}>
        
         <MainCard >
@@ -14,7 +14,11 @@ const {title, body, rating} = route.params
         
             <Text>{ body }</Text>
         
-            <Text>{ rating }</Text>
+           
+            <View style={styles.ratingbox}>
+                
+                <Image source={images.ratings[rating]} />
+            </View>
         </MainCard>
           
             <Button 
@@ -25,4 +29,14 @@ const {title, body, rating} = route.params
     )
 }
 
+const styles = StyleSheet.create({
+ratingbox: {
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingTop: 10,
+    marginTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#eee'
+}
+})
 
