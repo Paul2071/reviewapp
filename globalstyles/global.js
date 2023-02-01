@@ -5,6 +5,11 @@ export const  globalStyles = StyleSheet.create({
         flex: 1,
         padding: 20,
     },
+    modalcontainer: {
+        padding: 20,
+        flexDirection: 'row',
+        
+    },
     titletext: {
         fontFamily: "rubik",
         fontSize: 24,

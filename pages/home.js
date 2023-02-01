@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Modal } from "react-native";
 import { globalStyles } from "../globalstyles/global";
 import { useState } from 'react';
 import MainCard from "../components/mainCard";
@@ -13,6 +13,12 @@ export default function Home ( {navigation}) {
     return (
         <View style={globalStyles.maincontainer}>
          
+         <Modal visible={true} >
+            <View style={globalStyles.modalcontainer}>
+                <Text>Hello from the Modal</Text>
+            </View>
+
+         </Modal>
 
             <FlatList 
                 data={reviews}
