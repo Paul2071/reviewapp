@@ -5,6 +5,8 @@ import MainCard from "../components/mainCard";
 
 export default function Home ( {navigation}) {
 
+    const [ modalOpen, setModalOpen] = useState(false)
+
     const [reviews, setReviews] = useState([
         { title: 'Name of the Wind', rating: 5, body: 'lorem ipsum', key: '1' },
         { title: 'A Crown for Cold Silver', rating: 4, body: 'lorem ipsum', key: '2' },
@@ -13,12 +15,21 @@ export default function Home ( {navigation}) {
     return (
         <View style={globalStyles.maincontainer}>
          
-         <Modal visible={true} >
+         <Modal visible={modalOpen} >
             <View style={globalStyles.modalcontainer}>
                 <Text>Hello from the Modal</Text>
             </View>
+                <Button 
+                    title="finished review" 
+                    onPress={() => setModalOpen(value => !value) }
+                    />
 
          </Modal>
+
+        <Button 
+        title="Add a review" 
+        onPress={() => setModalOpen(value => !value) }
+        />
 
             <FlatList 
                 data={reviews}
