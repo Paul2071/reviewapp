@@ -5,7 +5,9 @@ import {
   Button,
   FlatList,
   TouchableOpacity,
+ 
   Modal,
+  
 } from "react-native";
 import { globalStyles } from "../globalstyles/global";
 import { useState } from "react";
@@ -25,15 +27,23 @@ export default function Home({ navigation }) {
     },
     { title: "Stardust", rating: 3, body: "lorem ipsum", key: "3" },
   ]);
+
+  const addReview = (review) => {
+    review.key = Math.random().toString();
+    setReviews((currentreviews) => {
+      return [review, ...currentreviews];
+    });
+    setModalOpen(false);
+  };
+
   return (
     <View style={globalStyles.maincontainer}>
       <Modal visible={modalOpen} animationType="slide">
-       
-        <ReviewForm></ReviewForm>
+        <ReviewForm addReview={addReview} />
         <Button
-          title="finished adding reviews"
-          onPress={() => setModalOpen((value) => !value)}
-        />
+              title="finished adding reviews"
+              onPress={() => setModalOpen((value) => !value)}
+            />
       </Modal>
 
       <Button
