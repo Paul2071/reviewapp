@@ -39,7 +39,7 @@ export default function ReviewForm ( { addReview } ) {
                     <View>
                         <TextInput
                             style={globalStyles.textinputcontainer}
-                            placeholder='Review title'
+                            placeholder='   Review title'
                             onChangeText={formikprops.handleChange('title')}
                             value={formikprops.values.title}
                             onBlur={formikprops.handleBlur('title')}
@@ -49,7 +49,7 @@ export default function ReviewForm ( { addReview } ) {
                         </Text>
                         <TextInput
                             style={globalStyles.textinputcontainer}
-                            placeholder='Author name'
+                            placeholder='   Author name'
                             onChangeText={formikprops.handleChange('author')}
                             value={formikprops.values.author}
                             onBlur={formikprops.handleBlur('author')}
@@ -59,8 +59,9 @@ export default function ReviewForm ( { addReview } ) {
                         </Text>
                         <TextInput
                             multiline
+                            minHeight= {80}
                             style={globalStyles.textinputcontainer}
-                            placeholder='Review text'
+                            placeholder='   Review text'
                             onChangeText={formikprops.handleChange('review')}
                             value={formikprops.values.review}
                             onBlur={formikprops.handleBlur('review')}
@@ -71,7 +72,7 @@ export default function ReviewForm ( { addReview } ) {
                         <TextInput
                             keyboardType='numeric'
                             style={globalStyles.textinputcontainer}
-                            placeholder='Rating (1 - 5 stars)'
+                            placeholder='   Rating (1 - 5 stars)'
                             onChangeText={formikprops.handleChange('rating')}
                             value={formikprops.values.rating}
                             onBlur={formikprops.handleBlur('rating')}
