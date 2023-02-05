@@ -10,3 +10,5 @@ https://docs.expo.dev/guides/using-custom-fonts/
 
 Had a play around with custom fonts, the above doc explains how it works - essentially you use the imported StyleSheet hook to create a keyvalue pair. The pair being the name of the style and an object containing the CSS/styles being applied. 
 To do that globally, rather than have an individual stylesheet for each componenet, have a global one that you import then pick and choose the styles you want the component to have.
+
+Random thing I read that may be useful - you can apply multiple styles to a button etc with the spread operator {...style1, ...style2} for example
