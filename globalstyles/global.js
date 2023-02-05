@@ -25,6 +25,13 @@ export const globalStyles = StyleSheet.create({
     marginVertical: 8,
     lineHeight: 20,
   },
+  errorHandling: {
+    color: 'crimson',
+    fontFamily: 'rubikbold',
+    marginBottom: 10,
+    marginTop: 6,
+    textAlign: 'center'
+  }
 });
 
 export const images = {
